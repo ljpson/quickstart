@@ -4,14 +4,14 @@
 <mapper namespace="com.helloworld.quickstart.mapper.QuickMapper">
 
     <select id="findById" parameterType="hashmap" resultType="hashmap">
-
-        SELECT
-            ID,
-            NAME
-        FROM
-            ITEM
-        WHERE
-            ID = #{id}
+        SELECT *
+        FROM ITEM
+        WHERE ID = #{id}
     </select>
+
+    <insert id="registerItem" parameterType="hashmap">
+        INSERT INTO ITEM (ID, NAME)
+            VALUES (#{id},#{name})
+    </insert>
 
 </mapper>

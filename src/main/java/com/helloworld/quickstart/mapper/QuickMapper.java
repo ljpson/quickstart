@@ -9,4 +9,6 @@ import java.util.HashMap;
 public interface QuickMapper {
 
     HashMap<String, Object> findById(HashMap<String, Object> paramMap);
+
+    void registerItem(HashMap<String, Object> paramMap);
 }
